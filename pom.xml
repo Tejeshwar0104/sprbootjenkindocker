@@ -22,7 +22,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.wip.MainClass</mainClass>
+							<mainClass>com.tej.MainClass</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
