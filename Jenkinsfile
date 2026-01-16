@@ -20,16 +20,16 @@ pipeline {
     stage('Build the Docker Image') {
       steps {
         echo 'Building Docker Image'
-        bat 'docker build -t myjavaproj:1.0 .'
+        bat 'docker build -t sprbootjenkin:1.0 .'
       }
     }
     
     stage('Run Docker Container') {
       steps {
-        echo 'Running Java Application'
+        echo 'Running SprBoot Application'
         bat '''
-        docker rm -f myjavaproj-container || exit 0
-        docker run --name myjavaproj-container myjavaproj:1.0
+        docker rm -f sprbootjenkin-container || exit 0
+        docker run --name sprbootjenkin-container sprbootjenkin:1.0
         
         '''               
       }
